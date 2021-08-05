@@ -1,0 +1,17 @@
+<div class="main">
+  <div class="card">
+    <p class="title">Add ToDo List</p>
+    <input type="text" id="text" />
+    <br />
+    <button (click)="addToList()">Add List</button>
+  </div>
+  <div class="list">
+    <p
+      *ngFor="let list of todoList"
+      (click)="remove(list)"
+      style="cursor: pointer"
+    >
+      x {{ list }}
+    </p>
+  </div>
+</div>
